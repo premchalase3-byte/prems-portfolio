@@ -1,0 +1,84 @@
+Fonts
+----------------------------------------------
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;600;700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+----------------------------------------------
+
+
+
+Skills
+----------------------------------------------
+
+I create impactful digital experiences through strategic marketing, branding, and audience engagement while keeping designs clean, modern, and user-focused.
+
+I LIKE TO WORK ON
+
+Social Media Marketing  
+Content Strategy  
+Lead Generation  
+Brand Promotion  
+Audience Engagement  
+Digital Campaigns  
+SEO & Business Listings  
+
+SKILLS
+
+Social Media Marketing  
+Content Marketing  
+SEO  
+Lead Generation  
+LinkedIn Marketing  
+Instagram Marketing  
+Audience Growth  
+Branding  
+Canva Design  
+Content Planning  
+Community Engagement  
+AI-Powered Marketing  
+
+TOOLS
+
+Canva  
+Google Analytics  
+Google Search Console  
+Meta Business Suite  
+ChatGPT  
+Google Workspace  
+VS Code  
+GitHub  
+
+----------------------------------------------
+
+
+
+About Text
+
+----------------------------------------------
+
+I'm Prem Chalase, a Digital Marketing enthusiast and BCA student from India passionate about building impactful online brands and engaging digital experiences.
+
+I specialize in Social Media Marketing, Lead Generation, Content Strategy, and Audience Engagement across LinkedIn, Instagram, Facebook, Quora, Reddit, and YouTube.
+
+During my internship at Corenest Tech LLP & Writebing, I managed multi-platform campaigns, created branded content, improved engagement, and contributed to SEO-focused growth strategies.
+
+I enjoy building creative digital campaigns, experimenting with modern marketing ideas, and helping brands grow through content, strategy, and audience engagement.
+
+I believe creativity and consistency can transform ideas into meaningful digital experiences. You can connect with me through my social links.
+
+----------------------------------------------
+
+
+
+Theme
+----------------------------------------------
+
+body:"#0D1117",
+text:"#F5F5F5",
+fontFamily:"'Source Sans Pro', sans-serif",
+bodyRgba:"13,17,23",
+textRgba:"245,245,245",
+
+----------------------------------------------
