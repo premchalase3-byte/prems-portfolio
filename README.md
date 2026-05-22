@@ -93,4 +93,4 @@ premchalase3@gmail.com
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/prems-portfolio.git
+git clone https://github.com/premchalase3-byte/prems-portfolio
