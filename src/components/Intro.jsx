@@ -38,14 +38,52 @@ border-right: 2px solid ${props => props.theme.text};
 z-index: 1;
 
 overflow: visible;
+
+@media (max-width: 768px){
+
+    width: 90vw;
+    height: auto;
+
+    min-height: 75vh;
+
+    flex-direction: column;
+
+    top: 52%;
+
+    padding: 1rem 0;
+
+    border-left: 2px solid ${props => props.theme.text};
+
+    background:
+    linear-gradient(
+    to bottom,
+    ${props => props.theme.body} 50%,
+    ${props => props.theme.text} 50%
+    ) left,
+
+    linear-gradient(
+    to bottom,
+    ${props => props.theme.body} 50%,
+    ${props => props.theme.text} 50%
+    ) right;
+
+    background-repeat:no-repeat;
+    background-size:2px 100%;
+}
 `
 
 const SubBox = styled.div`
 width: 50%;
 position: relative;
+
 display: flex;
 justify-content: center;
 align-items: center;
+
+@media (max-width: 768px){
+
+    width:100%;
+}
 `
 
 const ImageContainer = styled.div`
@@ -62,6 +100,19 @@ justify-content: center;
 align-items: flex-end;
 
 overflow: visible;
+
+@media (max-width: 768px){
+
+    position: relative;
+
+    left: 0;
+    bottom: 0;
+
+    height: auto;
+    width: 100%;
+
+    margin-top: 1rem;
+}
 `
 
 const ProfileImage = styled.img`
@@ -72,6 +123,16 @@ object-fit: contain;
 object-position: bottom;
 
 filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.25));
+
+@media (max-width: 768px){
+
+    width: 80%;
+    height: auto;
+
+    max-height: 320px;
+
+    object-fit: contain;
+}
 `
 
 const Text = styled.div`
@@ -84,7 +145,7 @@ cursor: pointer;
 
 display: flex;
 flex-direction: column;
-justify-content: space-evenly;
+justify-content: center;
 
 z-index: 2;
 
@@ -105,6 +166,29 @@ z-index: 2;
     line-height: 1.5;
     width: 90%;
 }
+
+@media (max-width: 768px){
+
+    padding: 1.5rem;
+
+    align-items: center;
+
+    text-align: center;
+
+    & > h1{
+        font-size: 2rem;
+    }
+
+    & > h3{
+        font-size: 1.2rem;
+    }
+
+    & > h6{
+        width: 100%;
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+}
 `
 
 const Intro = () => {
@@ -113,7 +197,7 @@ const Intro = () => {
 
         <Box
             initial={{ height: 0 }}
-            animate={{ height: '55vh' }}
+            animate={{ height: window.innerWidth <= 768 ? '75vh' : '55vh' }}
             transition={{
                 type: 'spring',
                 duration: 2,

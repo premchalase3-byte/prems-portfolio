@@ -20,6 +20,12 @@ position: relative;
 
 overflow-x: hidden;
 overflow-y: auto;
+
+padding-bottom: 4rem;
+
+@media (max-width: 768px){
+    padding-bottom: 8rem;
+}
 `
 
 const float = keyframes`
@@ -38,15 +44,25 @@ width: 20vw;
 
 animation: ${float} 4s ease infinite;
 
+z-index:2;
+
 img{
     width: 100%;
     height: auto;
 }
 
+@media (max-width: 1024px){
+    width: 28vw;
+}
+
 @media (max-width: 768px){
+
     width: 35vw;
+
     top: 5%;
-    right: 2%;
+    right: 5%;
+
+    opacity: 0.8;
 }
 `
 
@@ -58,7 +74,6 @@ color: ${(props) => props.theme.text};
 padding: 3rem;
 
 width: 58vw;
-min-height: 55vh;
 
 z-index: 3;
 
@@ -98,21 +113,45 @@ overflow-wrap: break-word;
 }
 
 @media (max-width: 1024px){
+
     width: 70vw;
+
+    top: 16%;
 }
 
 @media (max-width: 768px){
 
-    width: 85vw;
+    position: relative;
+
+    width: 88vw;
 
     left: 50%;
+    top: 12rem;
+
     transform: translateX(-50%);
 
-    top: 20%;
+    padding: 2rem 1.5rem;
 
-    padding: 2rem;
+    font-size: 0.95rem;
 
-    font-size: 1rem;
+    line-height: 1.9;
+
+    margin-bottom: 4rem;
+
+    min-height: auto;
+
+    &:hover{
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 480px){
+
+    width: 90vw;
+
+    padding: 1.5rem;
+
+    font-size: 0.88rem;
 
     line-height: 1.8;
 }
@@ -138,23 +177,23 @@ const AboutPage = () => {
 
                 <Main>
 
-                    I'm Prem Chalase, a Digital Marketing enthusiast and BCA student from India passionate about building impactful online brands and engaging digital experiences.
+                    I'm Prem Chalase, an HR and Digital Marketing enthusiast pursuing BCA in India, passionate about building impactful online brands, audience engagement, and professional communication.
 
                     <br /><br />
 
-                    I specialize in Social Media Marketing, Lead Generation, Content Strategy, and Audience Engagement across LinkedIn, Instagram, Facebook, Quora, Reddit, and YouTube.
+                    I specialize in Social Media Marketing, Recruitment Support, Branding, Content Strategy, and Audience Engagement across LinkedIn, Instagram, Facebook, Quora, Reddit, and YouTube.
 
                     <br /><br />
 
-                    During my internship at Corenest Tech LLP & Writebing, I managed multi-platform campaigns, created branded content, improved engagement, and contributed to SEO-focused growth strategies.
+                    During my internships at Corenest Tech LLP, Writebing, and LernX, I worked on recruitment outreach, multi-platform marketing campaigns, content creation, LinkedIn engagement, branding strategies, and communication-focused activities.
 
                     <br /><br />
 
-                    I enjoy building creative digital campaigns, experimenting with marketing ideas, and helping brands grow through content, strategy, and audience engagement.
+                    I enjoy building creative campaigns, experimenting with branding ideas, and helping businesses grow through strategy, engagement, and consistency.
 
                     <br /><br />
 
-                    I believe creativity and consistency can turn ideas into impactful digital experiences.
+                    My goal is to continuously learn, improve my communication and management skills, and grow as a professional in HR, branding, and digital marketing.
 
                 </Main>
 

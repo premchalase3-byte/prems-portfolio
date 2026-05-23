@@ -25,7 +25,8 @@ gap: 3rem;
 
 padding: 4rem;
 
-overflow: hidden;
+overflow-x: hidden;
+overflow-y: auto;
 
 /* Background Glow Effects */
 
@@ -70,8 +71,14 @@ overflow: hidden;
 }
 
 @media (max-width: 900px){
+
     flex-direction: column;
-    padding: 6rem 2rem;
+
+    align-items: center;
+
+    gap: 2rem;
+
+    padding: 8rem 1rem 4rem 1rem;
 }
 `
 
@@ -110,6 +117,8 @@ justify-content: flex-start;
 
 transition: all 0.35s ease;
 
+overflow-wrap: break-word;
+
 &:hover{
     color: white;
 
@@ -120,9 +129,27 @@ transition: all 0.35s ease;
     border: 1px solid rgba(255,255,255,0.2);
 }
 
-@media (max-width: 768px){
+@media (max-width: 1024px){
+
+    width: 42vw;
+}
+
+@media (max-width: 900px){
+
     width: 90vw;
+
     min-height: auto;
+
+    padding: 2rem;
+}
+
+@media (max-width: 480px){
+
+    width: 92vw;
+
+    padding: 1.5rem;
+
+    border-radius: 16px;
 }
 `
 
@@ -145,6 +172,18 @@ ${Main}:hover &{
 
 & > *:first-child{
     margin-right: 1rem;
+}
+
+@media (max-width: 768px){
+
+    font-size: 1.3rem;
+
+    margin-bottom: 1.2rem;
+
+    svg{
+        width: 32px;
+        height: 32px;
+    }
 }
 `
 
@@ -189,6 +228,30 @@ ${Main}:hover li{
 
 p{
     line-height: 1.9;
+}
+
+@media (max-width: 768px){
+
+    font-size: 0.95rem;
+
+    line-height: 1.8;
+
+    strong{
+        font-size: 0.95rem;
+    }
+
+    ul{
+        line-height: 1.8;
+    }
+
+    p{
+        line-height: 1.8;
+    }
+}
+
+@media (max-width: 480px){
+
+    font-size: 0.88rem;
 }
 `
 

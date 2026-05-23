@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import img from "../assets/Images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg"
 
 import LogoComponent from '../subComponents/LogoComponent'
-import SocialIcons from '../subComponents/SocialIcons'
 import PowerButton from '../subComponents/PowerButton'
 
 import { Blogs } from '../data/BlogData';
@@ -21,6 +20,12 @@ background-attachment: fixed;
 background-position: center;
 
 min-height: 100vh;
+
+overflow-x: hidden;
+
+@media (max-width: 768px){
+    background-attachment: scroll;
+}
 `
 
 const Container = styled.div`
@@ -32,6 +37,8 @@ min-height: 100vh;
 position: relative;
 
 padding-bottom: 6rem;
+
+overflow-x: hidden;
 `
 
 const HeroSection = styled.div`
@@ -45,6 +52,14 @@ justify-content: center;
 align-items: center;
 
 text-align: center;
+
+@media (max-width: 768px){
+
+    padding-top: 6rem;
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
 `
 
 const Heading = styled.h1`
@@ -60,7 +75,15 @@ color: ${props => props.theme.text};
 letter-spacing: 1px;
 
 @media (max-width: 768px){
-    font-size: 2.5rem;
+
+    font-size: 2rem;
+
+    line-height: 1.3;
+}
+
+@media (max-width: 480px){
+
+    font-size: 1.7rem;
 }
 `
 
@@ -78,8 +101,17 @@ color: ${props => props.theme.text};
 opacity: 0.9;
 
 @media (max-width: 768px){
-    width: 85%;
-    font-size: 1rem;
+
+    width: 95%;
+
+    font-size: 0.95rem;
+
+    line-height: 1.8;
+}
+
+@media (max-width: 480px){
+
+    font-size: 0.85rem;
 }
 `
 
@@ -89,8 +121,18 @@ margin-top: 3rem;
 display: flex;
 justify-content: center;
 align-items: center;
-gap: 2rem;
+gap: 1.5rem;
+
 flex-wrap: wrap;
+
+padding: 0 1rem;
+
+@media (max-width: 768px){
+
+    gap: 1rem;
+
+    margin-top: 2rem;
+}
 `
 
 const StatBox = styled.div`
@@ -106,8 +148,26 @@ backdrop-filter: blur(5px);
 
 transition: 0.3s ease;
 
+border-radius: 10px;
+
+background: rgba(255,255,255,0.05);
+
 &:hover{
     transform: translateY(-5px);
+}
+
+@media (max-width: 768px){
+
+    width: 90%;
+
+    font-size: 0.9rem;
+
+    padding: 0.9rem 1rem;
+}
+
+@media (max-width: 480px){
+
+    font-size: 0.8rem;
 }
 `
 
@@ -117,6 +177,14 @@ justify-content: center;
 align-items: center;
 
 padding-top: 5rem;
+
+padding-left: 1rem;
+padding-right: 1rem;
+
+@media (max-width: 768px){
+
+    padding-top: 3rem;
+}
 `
 
 const Grid = styled.div`
@@ -126,8 +194,16 @@ grid-template-columns: repeat(2, minmax(calc(10rem + 15vw), 1fr));
 
 grid-gap: calc(1rem + 2vw);
 
-@media (max-width: 768px){
+@media (max-width: 900px){
+
     grid-template-columns: 1fr;
+
+    width: 100%;
+}
+
+@media (max-width: 480px){
+
+    grid-gap: 1.5rem;
 }
 `
 
@@ -179,11 +255,11 @@ const BlogPage = () => {
 
             <Container>
 
+                {/* REMOVED SOCIAL ICONS */}
+
                 <LogoComponent />
 
                 <PowerButton />
-
-                <SocialIcons />
 
                 <AnchorComponent number={numbers} />
 

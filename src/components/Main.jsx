@@ -5,7 +5,6 @@ import styled, { keyframes } from 'styled-components'
 
 import LogoComponent from '../subComponents/LogoComponent'
 import PowerButton from '../subComponents/PowerButton'
-import SocialIcons from '../subComponents/SocialIcons'
 
 import { YinYang } from './AllSvgs'
 import Intro from './Intro'
@@ -37,6 +36,13 @@ h1{
     margin-top: 2rem;
     letter-spacing: 4px;
     font-size: 2rem;
+}
+
+@media (max-width: 768px){
+    h1{
+        font-size: 1.2rem;
+        text-align:center;
+    }
 }
 `
 
@@ -129,6 +135,16 @@ h2,h3,h4,h5,h6{
 
     z-index:0;
 }
+
+@media (max-width: 768px){
+    overflow-y:auto;
+
+    &::before,
+    &::after{
+        width:250px;
+        height:250px;
+    }
+}
 `
 
 const Divider = styled.div`
@@ -145,10 +161,18 @@ background: rgba(0,0,0,0.08);
 z-index:0;
 
 animation:${lineMove} 2s ease;
+
+@media (max-width: 768px){
+    display:none;
+}
 `
 
 const Container = styled.div`
 padding: 2rem;
+
+@media (max-width: 768px){
+    padding:1rem;
+}
 `
 
 /* ---------------- NAVIGATION ---------------- */
@@ -165,6 +189,15 @@ text-decoration: none;
 z-index:2;
 
 letter-spacing:1px;
+
+@media (max-width: 768px){
+    top:1rem;
+    right:1rem;
+
+    h2{
+        font-size:0.9rem;
+    }
+}
 `
 
 const BLOG = styled(NavLink)`
@@ -181,6 +214,10 @@ text-decoration: none;
 z-index:2;
 
 letter-spacing:1px;
+
+@media (max-width: 768px){
+    display:none;
+}
 `
 
 const WORK = styled(NavLink)`
@@ -197,6 +234,10 @@ text-decoration: none;
 z-index:2;
 
 letter-spacing:1px;
+
+@media (max-width: 768px){
+    display:none;
+}
 `
 
 const Certifications = styled(NavLink)`
@@ -211,6 +252,15 @@ text-decoration: none;
 z-index:2;
 
 letter-spacing:1px;
+
+@media (max-width: 768px){
+    top:4rem;
+    right:1rem;
+
+    h2{
+        font-size:0.9rem;
+    }
+}
 `
 
 /* ---------------- RESUME BUTTON ---------------- */
@@ -244,6 +294,17 @@ backdrop-filter: blur(10px);
 
     transform: translateY(-4px);
 }
+
+@media (max-width: 768px){
+    bottom:7rem;
+    right:50%;
+
+    transform:translateX(50%);
+
+    padding:0.7rem 1.2rem;
+
+    font-size:0.8rem;
+}
 `
 
 /* ---------------- BOTTOM BAR ---------------- */
@@ -259,6 +320,14 @@ width: 100%;
 
 display: flex;
 justify-content: space-evenly;
+
+@media (max-width: 768px){
+    bottom:1.5rem;
+
+    h2{
+        font-size:1rem;
+    }
+}
 `
 
 const ABOUT = styled(NavLink)`
@@ -333,6 +402,20 @@ z-index: 20;
     animation: ${blink} 1.5s infinite;
 
     color: ${props => props.theme.text};
+
+    text-align:center;
+}
+
+@media (max-width: 768px){
+
+    top:${props => props.$click ? '88%' :'50%'};
+    left:${props => props.$click ? '82%' :'50%'};
+
+    .enter-text{
+        font-size:0.8rem;
+        width:90%;
+        line-height:1.5;
+    }
 }
 `
 
@@ -355,6 +438,10 @@ z-index:1;
 transition:
 height 0.5s ease,
 width 1s ease 0.5s;
+
+@media (max-width:768px){
+    display:none;
+}
 `
 
 /* ---------------- MAIN COMPONENT ---------------- */
@@ -418,14 +505,14 @@ const Main = () => {
 
                 <LogoComponent theme={click ? 'dark' :'light'}/>
 
-                <SocialIcons theme={click ? 'dark' :'light'} />
+                
 
                 <Center $click={click}>
 
                     <YinYang
                         onClick={() => handleClick()}
-                        width={click ? 120 : 200}
-                        height={click ? 120 : 200}
+                        width={click ? 90 : 150}
+                        height={click ? 90 : 150}
                         fill='currentColor'
                     />
 

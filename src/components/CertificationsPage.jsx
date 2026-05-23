@@ -4,7 +4,6 @@ import styled, { ThemeProvider } from "styled-components";
 import { lightTheme } from "./Themes";
 
 import LogoComponent from "../subComponents/LogoComponent";
-import SocialIcons from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
 import BigTitle from "../subComponents/BigTitlte";
 
@@ -22,7 +21,8 @@ position: relative;
 
 padding: 4rem 0;
 
-overflow: hidden;
+overflow-x: hidden;
+overflow-y: auto;
 
 /* Soft background glow */
 
@@ -65,12 +65,20 @@ overflow: hidden;
 
     z-index: 0;
 }
+
+@media (max-width: 768px){
+
+    padding: 7rem 0 4rem 0;
+
+    align-items: flex-start;
+}
 `;
 
 const Main = styled.div`
 border: 1.5px solid rgba(0,0,0,0.25);
 
 /* GLASS EFFECT */
+
 background: rgba(255,255,255,0.18);
 
 backdrop-filter: blur(12px);
@@ -96,9 +104,31 @@ line-height: 1.8;
 
 border-radius: 20px;
 
+transition: 0.3s ease;
+
+&:hover{
+    transform: translateY(-5px);
+}
+
+@media (max-width: 1024px){
+
+    width: 70vw;
+}
+
 @media (max-width: 768px){
-    width: 85vw;
-    padding: 2rem;
+
+    width: 90vw;
+
+    padding: 2rem 1.5rem;
+
+    gap: 1.5rem;
+}
+
+@media (max-width: 480px){
+
+    width: 92vw;
+
+    padding: 1.5rem 1rem;
 }
 `;
 
@@ -107,6 +137,18 @@ font-size: 3rem;
 margin-bottom: 1rem;
 
 font-family: 'Karla', sans-serif;
+
+@media (max-width: 768px){
+
+    font-size: 2rem;
+
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 480px){
+
+    font-size: 1.7rem;
+}
 `;
 
 const Card = styled.div`
@@ -127,6 +169,8 @@ transition: 0.3s ease;
 
 box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 
+overflow-wrap: break-word;
+
 &:hover{
 
     background: rgba(0,0,0,0.85);
@@ -137,6 +181,16 @@ box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 
     border: 1px solid rgba(255,255,255,0.2);
 }
+
+@media (max-width: 768px){
+
+    padding: 1.2rem;
+}
+
+@media (max-width: 480px){
+
+    padding: 1rem;
+}
 `;
 
 const CertTitle = styled.h2`
@@ -144,12 +198,38 @@ font-size: 1.5rem;
 margin-bottom: 0.7rem;
 
 font-family: 'Karla', sans-serif;
+
+line-height: 1.5;
+
+@media (max-width: 768px){
+
+    font-size: 1.2rem;
+}
+
+@media (max-width: 480px){
+
+    font-size: 1rem;
+}
 `;
 
 const Text = styled.p`
 font-size: 1rem;
 
 opacity: 0.9;
+
+line-height: 1.8;
+
+@media (max-width: 768px){
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+}
+
+@media (max-width: 480px){
+
+    font-size: 0.88rem;
+}
 `;
 
 const CertificationsPage = () => {
@@ -160,9 +240,9 @@ const CertificationsPage = () => {
 
       <Box>
 
-        <LogoComponent theme="light" />
+        {/* REMOVED SOCIAL ICONS */}
 
-        <SocialIcons theme="light" />
+        <LogoComponent theme="light" />
 
         <PowerButton />
 
