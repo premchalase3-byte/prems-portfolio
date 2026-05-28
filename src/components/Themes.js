@@ -2,7 +2,7 @@
 
 export const lightTheme = {
 
-    body:"#FCF6F4",
+    body:"rgb(254, 240, 183)",
     text:"#000000",
     fontFamily:"'Source Sans Pro', sans-serif",
     bodyRgba : "252, 246, 244",
@@ -12,7 +12,7 @@ export const lightTheme = {
 export const DarkTheme = {
 
     body:"#000000",
-    text:"#FCF6F4",
+    text:"rgb(254, 240, 183)",
     fontFamily:"'Source Sans Pro', sans-serif",
     textRgba : "252, 246, 244",
     bodyRgba:"0,0,0",
