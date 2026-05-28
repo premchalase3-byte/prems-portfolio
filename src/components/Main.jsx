@@ -46,8 +46,8 @@ const CERTIFICATIONS = styled(NavLink)`
 color: ${props => props.theme.text};
 
 position: absolute;
-top: 2rem;
-right: 12rem;
+top: 4rem;
+right: 2rem;
 
 text-decoration: none;
 z-index:1;
@@ -281,7 +281,7 @@ const Main = () => {
                 whileTap={{scale: 0.9}}
                 >
 
-                    Say hi..
+                Say hi
 
                 </motion.h2>
 
@@ -312,7 +312,7 @@ const Main = () => {
                 whileTap={{scale: 0.9}}
                 >
 
-                    Certifications
+                    My Certificates
 
                 </motion.h2>
 

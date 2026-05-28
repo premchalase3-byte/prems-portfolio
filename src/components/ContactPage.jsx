@@ -261,12 +261,12 @@ const ContactPage = () => {
           <Title>Let's Connect.</Title>
 
           <Text>
-            I'm Prem Chalase, an HR and Digital Marketing enthusiast passionate about branding, audience engagement, recruitment, communication, content strategy, lead generation, and creative digital experiences.
+            I'm Prem Chalase, an Digital Marketing enthusiast passionate about branding, audience engagement, recruitment, communication, content strategy, lead generation, and creative digital experiences.
           </Text>
 
-          <Text>
+          <LinkText>
             premchalase3@gmail.com
-          </Text>
+          </LinkText>
 
           <Text>
             +91 7760973219
