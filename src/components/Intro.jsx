@@ -12,7 +12,7 @@ top: 50%;
 transform: translate(-50%, -50%);
 
 width: 65vw;
-height: 55vh;
+height:55vh;
 
 display: flex;
 
@@ -35,83 +35,106 @@ background-size: 100% 2px;
 border-left: 2px solid ${props => props.theme.body};
 border-right: 2px solid ${props => props.theme.text};
 
-z-index: 1;
+z-index:1;
 
-overflow: visible;
+overflow: hidden;
 
 @media (max-width: 768px){
 
     width: 90vw;
-    height: auto;
+    height: 70vh;
 
-    min-height: 75vh;
-
-    flex-direction: column;
-
-    top: 52%;
-
-    padding: 1rem 0;
-
-    border-left: 2px solid ${props => props.theme.text};
-
-    background:
-    linear-gradient(
-    to bottom,
-    ${props => props.theme.body} 50%,
-    ${props => props.theme.text} 50%
-    ) left,
-
-    linear-gradient(
-    to bottom,
-    ${props => props.theme.body} 50%,
-    ${props => props.theme.text} 50%
-    ) right;
-
-    background-repeat:no-repeat;
-    background-size:2px 100%;
+    top: 55%;
 }
 `
 
 const SubBox = styled.div`
 width: 50%;
+height: 100%;
+
 position: relative;
 
 display: flex;
 justify-content: center;
 align-items: center;
 
+overflow: hidden;
+`
+
+const Text = styled.div`
+width: 100%;
+
+padding: 2rem 2rem 2rem 3rem;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+
+color: ${props => props.theme.body};
+
+z-index: 2;
+
+text-align: left;
+
+h1{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+h3{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+
+    width: 100%;
+}
+
+h6{
+    font-size: 1rem;
+    line-height: 1.8;
+
+    color: ${props => `rgba(${props.theme.bodyRgba},0.75)`};
+
+    width: 85%;
+}
+
 @media (max-width: 768px){
 
-    width:100%;
+    padding: 2rem 1rem 2rem 2rem;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    h1{
+        font-size: 3rem;
+    }
+
+    h3{
+        font-size: 1.6rem;
+    }
+
+    h6{
+        font-size: 0.95rem;
+        width: 95%;
+        line-height: 1.7;
+    }
 }
 `
 
-const ImageContainer = styled.div`
-position: absolute;
-
-bottom: -2.5rem;
-left: -8%;
-
+const ImageWrapper = styled.div`
 width: 100%;
-height: 118%;
+height: 100%;
 
 display: flex;
 justify-content: center;
 align-items: flex-end;
 
-overflow: visible;
+position: relative;
 
 @media (max-width: 768px){
 
-    position: relative;
-
-    left: 0;
-    bottom: 0;
-
-    height: auto;
-    width: 100%;
-
-    margin-top: 1rem;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 `
 
@@ -120,74 +143,20 @@ height: 115%;
 width: auto;
 
 object-fit: contain;
-object-position: bottom;
+
+object-position: bottom center;
 
 filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.25));
 
 @media (max-width: 768px){
 
-    width: 80%;
-    height: auto;
+    height: 78%;
 
-    max-height: 320px;
+    position: absolute;
+    bottom: 0;
+    right: 8%;
 
-    object-fit: contain;
-}
-`
-
-const Text = styled.div`
-font-size: calc(1em + 1.5vw);
-
-color: ${props => props.theme.body};
-
-padding: 2rem;
-cursor: pointer;
-
-display: flex;
-flex-direction: column;
-justify-content: center;
-
-z-index: 2;
-
-& > h1{
-    font-size: calc(2rem + 2vw);
-    margin-bottom: 0.5rem;
-}
-
-& > h3{
-    font-size: calc(1rem + 1.2vw);
-    margin-bottom: 1rem;
-}
-
-& > h6{
-    color: ${props => `rgba(${props.theme.bodyRgba},0.75)`};
-    font-size: calc(0.6rem + 0.8vw);
-    font-weight: 300;
-    line-height: 1.5;
-    width: 90%;
-}
-
-@media (max-width: 768px){
-
-    padding: 1.5rem;
-
-    align-items: center;
-
-    text-align: center;
-
-    & > h1{
-        font-size: 2rem;
-    }
-
-    & > h3{
-        font-size: 1.2rem;
-    }
-
-    & > h6{
-        width: 100%;
-        font-size: 0.9rem;
-        line-height: 1.7;
-    }
+    object-position: bottom right;
 }
 `
 
@@ -196,13 +165,13 @@ const Intro = () => {
     return (
 
         <Box
-            initial={{ height: 0 }}
-            animate={{ height: window.innerWidth <= 768 ? '75vh' : '55vh' }}
-            transition={{
-                type: 'spring',
-                duration: 2,
-                delay: 1
-            }}
+        initial={{height:0}}
+        animate={{height: '55vh'}}
+        transition={{
+            type: 'spring',
+            duration:2,
+            delay:1
+        }}
         >
 
             <SubBox>
@@ -225,22 +194,26 @@ const Intro = () => {
             <SubBox>
 
                 <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{
-                        duration: 1,
-                        delay: 2
-                    }}
+                initial={{opacity:0}}
+                animate={{opacity: 1}}
+                transition={{
+                    duration:1,
+                    delay:2
+                }}
+                style={{
+                    width:'100%',
+                    height:'100%'
+                }}
                 >
 
-                    <ImageContainer>
+                    <ImageWrapper>
 
                         <ProfileImage
                             src={Me}
-                            alt="Prem Chalase"
+                            alt="Profile Pic"
                         />
 
-                    </ImageContainer>
+                    </ImageWrapper>
 
                 </motion.div>
 

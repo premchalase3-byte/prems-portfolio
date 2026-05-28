@@ -3,7 +3,6 @@ import styled, { keyframes, ThemeProvider } from 'styled-components'
 import { DarkTheme } from './Themes';
 
 import LogoComponent from '../subComponents/LogoComponent';
-import SocialIcons from '../subComponents/SocialIcons';
 import PowerButton from '../subComponents/PowerButton';
 import ParticleComponent from '../subComponents/ParticleComponent';
 import BigTitle from '../subComponents/BigTitlte'
@@ -165,7 +164,7 @@ const AboutPage = () => {
 
                 <LogoComponent theme='dark' />
 
-                <SocialIcons theme='dark' />
+                {/* SOCIAL ICONS REMOVED */}
 
                 <PowerButton />
 
@@ -177,7 +176,7 @@ const AboutPage = () => {
 
                 <Main>
 
-                    I'm Prem Chalase, an HR and Digital Marketing enthusiast pursuing BCA in India, passionate about building impactful online brands, audience engagement, and professional communication.
+                    I'm Prem Chalase, an Digital Marketing enthusiast pursuing BCA in India, passionate about building impactful online brands, audience engagement, and professional communication.
 
                     <br /><br />
 
