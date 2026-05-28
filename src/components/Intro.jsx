@@ -64,7 +64,7 @@ overflow: hidden;
 const Text = styled.div`
 width: 100%;
 
-padding: 2rem 2rem 2rem 3rem;
+padding: 2rem 2rem 2rem 1.2rem;
 
 display: flex;
 flex-direction: column;
@@ -100,17 +100,19 @@ h6{
 
 @media (max-width: 768px){
 
-    padding: 2rem 1rem 2rem 2rem;
+    padding: 2rem 1rem 2rem 1rem;
 
     justify-content: flex-start;
     align-items: flex-start;
+
+    text-align: left;
 
     h1{
         font-size: 3rem;
     }
 
     h3{
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
     h6{
