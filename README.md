@@ -24,8 +24,7 @@ This portfolio showcases my work in Digital Marketing, Branding, Social Media St
 
 Add your deployed link here:
 
-https://your-portfolio-link.com
-
+https://prems-portfolio-eight.vercel.app/
 ---
 
 ## 🛠️ Tech Stack
