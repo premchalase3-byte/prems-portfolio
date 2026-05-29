@@ -264,12 +264,28 @@ const ContactPage = () => {
             I'm Prem Chalase, an Digital Marketing enthusiast passionate about branding, audience engagement, recruitment, communication, content strategy, lead generation, and creative digital experiences.
           </Text>
 
-          <LinkText>
-            premchalase3@gmail.com
-          </LinkText>
+          {/* EMAIL */}
 
           <Text>
-            +91 7760973219
+            Email:
+            <br />
+            <LinkText
+              href="mailto:premchalase3@gmail.com"
+            >
+              premchalase3@gmail.com
+            </LinkText>
+          </Text>
+
+          {/* PHONE */}
+
+          <Text>
+            Phone:
+            <br />
+            <LinkText
+              href="tel:+917760973219"
+            >
+              +91 7760973219
+            </LinkText>
           </Text>
 
           <Text>
