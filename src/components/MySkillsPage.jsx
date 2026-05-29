@@ -305,8 +305,8 @@ const MySkillsPage = () => {
                         <strong>TOOLS</strong>
 
                         <ul>
-                            <li>Canva</li>
-                            <li>Google Analytics</li>
+                            <li>Microsoft Clarity</li>
+                            <li>Google Analytics(GA4)</li>
                             <li>Meta Business Suite</li>
                             <li>Google Search Console</li>
                         </ul>
@@ -351,7 +351,7 @@ const MySkillsPage = () => {
                         <p>
                             LinkedIn, Instagram, Facebook,
                             Reddit, Quora, YouTube,
-                            Canva, GitHub &
+                            Business Listing, Microsoft Clarity, GitHub &
                             Google Workspace.
                         </p>
 
