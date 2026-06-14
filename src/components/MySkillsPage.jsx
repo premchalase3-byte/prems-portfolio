@@ -291,6 +291,7 @@ const MySkillsPage = () => {
 
                         <ul>
                             <li>Social Media Marketing</li>
+                            <li>E-Mail Marketing</li>
                             <li>Content Strategy</li>
                             <li>Lead Generation</li>
                             <li>SEO & Branding</li>
@@ -306,6 +307,7 @@ const MySkillsPage = () => {
 
                         <ul>
                             <li>Microsoft Clarity</li>
+                            <li>Brevo</li>
                             <li>Google Analytics(GA4)</li>
                             <li>Meta Business Suite</li>
                             <li>Google Search Console</li>
@@ -335,7 +337,7 @@ const MySkillsPage = () => {
                         <strong>SKILLS</strong>
 
                         <p>
-                            Social Media Marketing, Content Marketing,
+                            Social Media Marketing,E-Mail Marketing,Content Marketing,
                             LinkedIn Marketing, Instagram Growth,
                             SEO Optimization, Business Listings,
                             Audience Growth, Community Engagement,
@@ -349,7 +351,7 @@ const MySkillsPage = () => {
                         <strong>PLATFORMS</strong>
 
                         <p>
-                            LinkedIn, Instagram, Facebook,
+                            LinkedIn, Brevo, Microsoft Clarity, Instagram, Facebook,
                             Reddit, Quora, YouTube,
                             Business Listing, Microsoft Clarity, GitHub &
                             Google Workspace.
