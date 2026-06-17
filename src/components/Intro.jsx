@@ -32,16 +32,16 @@ ${props => props.theme.text} 50%
 background-repeat: no-repeat;
 background-size: 100% 2px;
 
-border-left: 2px solid ${props => props.theme.body};
-border-right: 2px solid ${props => props.theme.text};
+border-left: 1px solid ${props => props.theme.body};
+border-right: 1px solid ${props => props.theme.text};
 
 z-index:1;
 overflow: hidden;
 
 @media (max-width: 768px){
 
-    width: 90vw;
-    height: 70vh;
+    width: 82vw;
+    height: 65vh;
 
     top: 55%;
 }
