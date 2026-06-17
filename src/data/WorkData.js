@@ -1,91 +1,75 @@
 export const Work = [
 
 {
-    id:1,
-    name:"LinkedIn Lead Generation Campaign",
-    description:
-    "Executed LinkedIn outreach and engagement strategies to improve professional networking, lead generation, and audience growth.",
-    tags:["LinkedIn","LeadGeneration","Marketing"],
+id:1,
+name:"Prem's Pencil Sketches - Business Website",
+description:
+"Built and marketed a complete business website for a custom pencil sketch service. Implemented SEO, conversion-focused landing pages, WhatsApp lead capture, Microsoft Clarity heatmaps, and email marketing automation using Brevo.",
+tags:["SEO","LeadGeneration","MicrosoftClarity"],
 
-    demo:"https://linkedin.com",
-    github:"https://github.com/"
+demo:"https://prems-pencil-sketches.vercel.app/",
+github:"https://github.com/premchalase3-byte"
+
 },
 
 {
-    id:2,
-    name:"Instagram Brand Growth Strategy",
-    description:
-    "Managed Instagram content planning, audience engagement, hashtag optimization, and branding campaigns for improved visibility.",
-    tags:["Instagram","Branding","ContentMarketing"],
+id:2,
+name:"Social Media Growth Campaign",
+description:
+"Managed multi-platform content marketing across LinkedIn, Instagram, Facebook, Reddit, Quora, and YouTube. Increased engagement through audience-focused content, strategic posting schedules, and platform-specific optimization.",
+tags:["SocialMedia","ContentMarketing","Engagement"],
 
-    demo:"https://instagram.com",
-    github:"https://github.com/"
+demo:"https://linkedin.com",
+github:"https://github.com/premchalase3-byte"
+
 },
 
 {
-    id:3,
-    name:"SEO & Business Listing Optimization",
-    description:
-    "Improved online visibility through SEO-focused promotion, keyword optimization, and business listing management strategies.",
-    tags:["SEO","Google","Optimization"],
+id:3,
+name:"SEO & Business Listing Optimization",
+description:
+"Implemented keyword research, local SEO strategies, business listing optimization, and search visibility improvements to increase organic discovery and brand reach.",
+tags:["SEO","LocalSEO","GoogleSearchConsole"],
 
-    demo:"https://google.com",
-    github:"https://github.com/"
+demo:"https://google.com",
+github:"https://github.com/premchalase3-byte"
+
 },
 
 {
-    id:4,
-    name:"Writebing Academic Marketing",
-    description:
-    "Created engaging academic content and social campaigns to support researchers, scholars, and PhD students worldwide.",
-    tags:["Marketing","Content","Writebing"],
+id:4,
+name:"Corenest Tech LLP Marketing Campaigns",
+description:
+"Worked on social media marketing, lead generation, content planning, audience engagement, and performance analysis while contributing to digital growth initiatives and brand visibility campaigns.",
+tags:["DigitalMarketing","LeadGeneration","Analytics"],
 
-    demo:"https://writebing.com",
-    github:"https://github.com/"
+demo:"https://corenest.in/",
+github:"https://github.com/premchalase3-byte"
+
 },
 
 {
-    id:5,
-    name:"Reddit & Quora Audience Engagement",
-    description:
-    "Implemented community engagement strategies across Reddit and Quora to improve reach, interactions, and brand awareness.",
-    tags:["Reddit","Quora","Engagement"],
+id:5,
+name:"Email Marketing Automation",
+description:
+"Created email marketing workflows using Brevo including lead capture forms, audience segmentation, welcome sequences, and automated follow-ups to improve customer engagement.",
+tags:["EmailMarketing","Brevo","Automation"],
 
-    demo:"https://reddit.com",
-    github:"https://github.com/"
+demo:"https://www.brevo.com/",
+github:"https://github.com/premchalase3-byte"
+
 },
 
 {
-    id:6,
-    name:"YouTube Promotion & Content Strategy",
-    description:
-    "Worked on YouTube content optimization, audience targeting, and promotional strategies to increase digital engagement.",
-    tags:["YouTube","Promotion","AudienceGrowth"],
+id:6,
+name:"Google Analytics & User Behaviour Analysis",
+description:
+"Tracked website traffic, user behaviour, acquisition channels, and engagement metrics using Google Analytics 4 and Microsoft Clarity to support data-driven marketing decisions.",
+tags:["GA4","Analytics","MicrosoftClarity"],
 
-    demo:"https://youtube.com",
-    github:"https://github.com/"
-},
+demo:"https://analytics.google.com/",
+github:"https://github.com/premchalase3-byte"
 
-{
-    id:7,
-    name:"Canva Social Media Creatives",
-    description:
-    "Designed branded marketing creatives, promotional posts, and visual assets aligned with digital marketing strategies.",
-    tags:["Canva","Design","SocialMedia"],
-
-    demo:"https://canva.com",
-    github:"https://github.com/"
-},
-
-{
-    id:8,
-    name:"AI-Powered Marketing Workflow",
-    description:
-    "Utilized AI tools for campaign planning, content optimization, audience research, and productivity enhancement in digital marketing.",
-    tags:["AI","Marketing","Automation"],
-
-    demo:"https://openai.com",
-    github:"https://github.com/"
 }
 
 ]

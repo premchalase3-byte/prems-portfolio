@@ -261,7 +261,7 @@ const ContactPage = () => {
           <Title>Let's Connect.</Title>
 
           <Text>
-            I'm Prem Chalase, an Digital Marketing enthusiast passionate about branding, audience engagement, recruitment, communication, content strategy, lead generation, and creative digital experiences.
+            I'm Prem Chalase, a BCA graduate and Digital Marketing professional focused on SEO, Analytics, Lead Generation, Email Marketing, and Growth Marketing. I'm currently open to internships, full-time opportunities, freelance projects, and collaborations.
           </Text>
 
           {/* EMAIL */}
@@ -287,7 +287,11 @@ const ContactPage = () => {
               +91 7760973219
             </LinkText>
           </Text>
-
+          <Text>
+            Location:
+            <br />
+              Hubli, Karnataka, India
+          </Text>
           <Text>
             LinkedIn:
             <br />
@@ -317,7 +321,7 @@ const ContactPage = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            View Resume
+            Download Resume
           </Button>
 
         </Main>

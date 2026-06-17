@@ -24,8 +24,6 @@ padding: 4rem 0;
 overflow-x: hidden;
 overflow-y: auto;
 
-/* Soft background glow */
-
 &::before{
     content: '';
 
@@ -67,17 +65,13 @@ overflow-y: auto;
 }
 
 @media (max-width: 768px){
-
     padding: 7rem 0 4rem 0;
-
     align-items: flex-start;
 }
 `;
 
 const Main = styled.div`
 border: 1.5px solid rgba(0,0,0,0.25);
-
-/* GLASS EFFECT */
 
 background: rgba(255,255,255,0.18);
 
@@ -111,50 +105,38 @@ transition: 0.3s ease;
 }
 
 @media (max-width: 1024px){
-
     width: 70vw;
 }
 
 @media (max-width: 768px){
-
     width: 90vw;
-
     padding: 2rem 1.5rem;
-
     gap: 1.5rem;
 }
 
 @media (max-width: 480px){
-
     width: 92vw;
-
     padding: 1.5rem 1rem;
 }
 `;
 
 const Title = styled.h1`
 font-size: 3rem;
-margin-bottom: 1rem;
+margin-bottom: 0.5rem;
 
 font-family: 'Karla', sans-serif;
 
 @media (max-width: 768px){
-
     font-size: 2rem;
-
-    margin-bottom: 0.5rem;
 }
 
 @media (max-width: 480px){
-
     font-size: 1.7rem;
 }
 `;
 
 const Card = styled.div`
 border: 1px solid rgba(0,0,0,0.2);
-
-/* TRANSPARENT GLASS CARD */
 
 background: rgba(255,255,255,0.12);
 
@@ -172,23 +154,19 @@ box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 overflow-wrap: break-word;
 
 &:hover{
-
     background: rgba(0,0,0,0.85);
-
     color: white;
 
-    transform: translateY(-6px) scale(1.01);
+    transform: translateY(-6px);
 
     border: 1px solid rgba(255,255,255,0.2);
 }
 
 @media (max-width: 768px){
-
     padding: 1.2rem;
 }
 
 @media (max-width: 480px){
-
     padding: 1rem;
 }
 `;
@@ -202,12 +180,10 @@ font-family: 'Karla', sans-serif;
 line-height: 1.5;
 
 @media (max-width: 768px){
-
     font-size: 1.2rem;
 }
 
 @media (max-width: 480px){
-
     font-size: 1rem;
 }
 `;
@@ -220,14 +196,11 @@ opacity: 0.9;
 line-height: 1.8;
 
 @media (max-width: 768px){
-
     font-size: 0.95rem;
-
     line-height: 1.7;
 }
 
 @media (max-width: 480px){
-
     font-size: 0.88rem;
 }
 `;
@@ -240,25 +213,29 @@ const CertificationsPage = () => {
 
       <Box>
 
-        {/* REMOVED SOCIAL ICONS */}
-
         <LogoComponent theme="light" />
 
         <PowerButton />
 
         <Main>
 
-          <Title>Certifications.</Title>
+          <Title>Certifications & Credentials</Title>
+
+          <Text>
+            Verified certifications and practical experience in SEO,
+            Analytics, Lead Generation, Email Marketing, and Digital Marketing.
+          </Text>
 
           <Card>
 
             <CertTitle>
-              Digital Marketing Internship – Corenest Tech LLP / Writebing
+              Google Analytics Certification
             </CertTitle>
 
             <Text>
-              Successfully completed a Digital Marketing Internship focused on
-              branding, audience engagement, content promotion, and lead generation.
+              Issued by Google. Demonstrates proficiency in Google Analytics 4 (GA4),
+              audience analysis, traffic acquisition, event tracking, conversion
+              measurement, and data-driven marketing decisions.
             </Text>
 
             <Text>
@@ -270,12 +247,17 @@ const CertificationsPage = () => {
           <Card>
 
             <CertTitle>
-              AI-powered Performance Google Ads Certification
+              HubSpot SEO Certification
             </CertTitle>
 
             <Text>
-              Learned AI-driven Google Ads optimization techniques,
-              campaign performance strategies, and audience targeting methods.
+              Issued by HubSpot Academy. Covers keyword research, on-page SEO,
+              technical SEO, content optimization, link building, and search
+              engine ranking strategies.
+            </Text>
+
+            <Text>
+              Year: 2026
             </Text>
 
           </Card>
@@ -283,12 +265,17 @@ const CertificationsPage = () => {
           <Card>
 
             <CertTitle>
-              Google Digital Garage – Fundamentals of Digital Marketing
+              Digital Marketing Internship – Corenest Tech LLP
             </CertTitle>
 
             <Text>
-              Covered SEO, SEM, analytics, branding, digital campaigns,
-              content marketing, and online business growth strategies.
+              Completed internship focused on SEO, social media marketing,
+              lead generation, content marketing, audience engagement,
+              and digital campaign execution.
+            </Text>
+
+            <Text>
+              Also I was the Best Performer Of the Internship Program for my contributions to digital marketing campaigns and measurable results.
             </Text>
 
           </Card>
@@ -296,29 +283,13 @@ const CertificationsPage = () => {
           <Card>
 
             <CertTitle>
-              Google Analytics Certification
+              Digital Marketing & Analytics Learning Track
             </CertTitle>
 
             <Text>
-              Gained knowledge in website analytics, audience behavior tracking,
-              campaign performance analysis, and data-driven decision making.
-            </Text>
-
-          </Card>
-
-          <Card>
-
-            <CertTitle>
-              Meta Social Media Marketing Certification
-            </CertTitle>
-
-            <Text>
-              Currently pursuing advanced learning in Meta Ads,
-              social media strategy, audience targeting, and campaign management.
-            </Text>
-
-            <Text>
-              Status: Pursuing
+              Practical experience with Google Analytics 4, Microsoft Clarity,
+              Google Search Console, Brevo Email Marketing, SEO optimization,
+              and performance analysis through projects and internships.
             </Text>
 
           </Card>
@@ -326,7 +297,7 @@ const CertificationsPage = () => {
         </Main>
 
         <BigTitle
-          text="CERTS"
+          text="CERTIFICATIONS"
           top="10%"
           right="5%"
         />

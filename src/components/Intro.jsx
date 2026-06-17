@@ -36,7 +36,6 @@ border-left: 2px solid ${props => props.theme.body};
 border-right: 2px solid ${props => props.theme.text};
 
 z-index:1;
-
 overflow: hidden;
 
 @media (max-width: 768px){
@@ -64,7 +63,7 @@ overflow: hidden;
 const Text = styled.div`
 width: 100%;
 
-padding: 2rem 2rem 2rem 1.2rem;
+padding: 2rem 2rem 2rem 1.5rem;
 
 display: flex;
 flex-direction: column;
@@ -74,19 +73,18 @@ align-items: flex-start;
 color: ${props => props.theme.body};
 
 z-index: 2;
-
 text-align: left;
 
 h1{
-    font-size: 4rem;
-    margin-bottom: 1rem;
+    font-size: 3.8rem;
+    margin-bottom: 0.5rem;
+    font-weight:700;
 }
 
 h3{
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 1rem;
-
-    width: 100%;
+    font-weight:500;
 }
 
 h6{
@@ -100,25 +98,20 @@ h6{
 
 @media (max-width: 768px){
 
-    padding: 2rem 1rem 2rem 1rem;
-
-    justify-content: flex-start;
-    align-items: flex-start;
-
-    text-align: left;
+    padding: 1.5rem 1rem;
 
     h1{
-        font-size: 3rem;
+        font-size: 2.3rem;
     }
 
     h3{
-        font-size: 1.4rem;
+        font-size: 1.1rem;
     }
 
     h6{
-        font-size: 0.95rem;
-        width: 95%;
-        line-height: 1.7;
+        font-size: 0.85rem;
+        width: 100%;
+        line-height: 1.6;
     }
 }
 `
@@ -145,7 +138,6 @@ height: 115%;
 width: auto;
 
 object-fit: contain;
-
 object-position: bottom center;
 
 filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.25));
@@ -180,13 +172,14 @@ const Intro = () => {
 
                 <Text>
 
-                    <h1>Hi,</h1>
+                    <h1>Hi, I'm Prem.</h1>
 
-                    <h3>I'm Prem.N.Chalase</h3>
+                    <h3>Digital Marketing & SEO Specialist</h3>
 
                     <h6>
-                        I help brands grow through creative
-                        marketing and digital strategy.
+                        Helping businesses grow through strategic digital marketing,
+                        search optimization, lead generation, and data-driven
+                        decision making.
                     </h6>
 
                 </Text>
@@ -212,7 +205,7 @@ const Intro = () => {
 
                         <ProfileImage
                             src={Me}
-                            alt="Profile Pic"
+                            alt="Prem Chalase"
                         />
 
                     </ImageWrapper>

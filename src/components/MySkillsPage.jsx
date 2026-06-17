@@ -280,9 +280,9 @@ const MySkillsPage = () => {
                     </Title>
 
                     <Description>
-                        I create impactful digital experiences through strategic marketing,
-                        branding, and audience engagement while keeping campaigns modern,
-                        clean, and growth-focused.
+                          I help businesses improve their online presence through SEO,
+                         content marketing, lead generation, email marketing, and
+                         data-driven digital strategies.
                     </Description>
 
                     <Description>
@@ -290,13 +290,13 @@ const MySkillsPage = () => {
                         <strong>I LIKE TO WORK ON</strong>
 
                         <ul>
-                            <li>Social Media Marketing</li>
-                            <li>E-Mail Marketing</li>
-                            <li>Content Strategy</li>
+                            <li>Search Engine Optimization (SEO)</li>
                             <li>Lead Generation</li>
-                            <li>SEO & Branding</li>
+                             <li>Email Marketing</li>
+                             <li>Content Marketing</li>
+                             <li>Social Media Marketing</li>
+                            <li>Keyword Research</li>
                             <li>Audience Engagement</li>
-                            <li>Digital Campaigns</li>
                         </ul>
 
                     </Description>
@@ -306,11 +306,12 @@ const MySkillsPage = () => {
                         <strong>TOOLS</strong>
 
                         <ul>
-                            <li>Microsoft Clarity</li>
-                            <li>Brevo</li>
-                            <li>Google Analytics(GA4)</li>
-                            <li>Meta Business Suite</li>
-                            <li>Google Search Console</li>
+                             <li>Google Analytics 4 (GA4)</li>
+                             <li>Google Search Console</li>
+                             <li>Microsoft Clarity</li>
+                             <li>Brevo</li>
+                             <li>Meta Business Suite</li>
+                             <li>Canva</li>
                         </ul>
 
                     </Description>
@@ -327,23 +328,21 @@ const MySkillsPage = () => {
                     </Title>
 
                     <Description>
-                        I enjoy helping brands grow through creative campaigns,
-                        audience-focused strategies, and performance-driven
-                        digital marketing.
+                        I enjoy analyzing user behavior, optimizing campaigns,
+                        improving search visibility, and helping businesses grow
+                        through measurable marketing strategies.
                     </Description>
 
                     <Description>
 
-                        <strong>SKILLS</strong>
+                        <strong>SPECIALIZATIONS</strong>
 
                         <p>
-                            Social Media Marketing,E-Mail Marketing,Content Marketing,
-                            LinkedIn Marketing, Instagram Growth,
-                            SEO Optimization, Business Listings,
-                            Audience Growth, Community Engagement,
-                            Branding & AI-powered Marketing.
+                             SEO Optimization, Technical SEO, On-Page SEO,
+                             Conversion Rate Optimization (CRO), Lead Generation,
+                             Email Automation, Local SEO, Audience Growth,
+                             Content Strategy, and Performance Analysis.
                         </p>
-
                     </Description>
 
                     <Description>

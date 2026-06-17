@@ -23,16 +23,23 @@ overflow-y: auto;
 padding-bottom: 4rem;
 
 @media (max-width: 768px){
-    padding-bottom: 8rem;
+padding-bottom: 8rem;
 }
 `
 
 const float = keyframes`
-0% { transform: translateY(-10px) }
-50% { transform: translateY(15px) translateX(15px) }
-100% { transform: translateY(-10px) }
-`
+0% {
+    transform: translateY(-10px);
+}
 
+50% {
+    transform: translateY(15px) translateX(15px);
+}
+
+100% {
+    transform: translateY(-10px);
+}
+`
 const Spaceman = styled.div`
 position: absolute;
 
@@ -46,22 +53,23 @@ animation: ${float} 4s ease infinite;
 z-index:2;
 
 img{
-    width: 100%;
-    height: auto;
+width: 100%;
+height: auto;
 }
 
 @media (max-width: 1024px){
-    width: 28vw;
+width: 28vw;
 }
 
 @media (max-width: 768px){
 
-    width: 35vw;
+width: 35vw;
 
-    top: 5%;
-    right: 5%;
+top: 5%;
+right: 5%;
 
-    opacity: 0.8;
+opacity: 0.8;
+
 }
 `
 
@@ -107,105 +115,107 @@ transition: all 0.3s ease;
 overflow-wrap: break-word;
 
 &:hover{
-    transform: translateY(-5px);
-    background: rgba(255,255,255,0.12);
+transform: translateY(-5px);
+background: rgba(255,255,255,0.12);
 }
 
 @media (max-width: 1024px){
 
-    width: 70vw;
+width: 70vw;
 
-    top: 16%;
+top: 16%;
+
 }
 
 @media (max-width: 768px){
 
-    position: relative;
+position: relative;
 
-    width: 88vw;
+width: 88vw;
 
-    left: 50%;
-    top: 12rem;
+left: 50%;
+top: 12rem;
 
+transform: translateX(-50%);
+
+padding: 2rem 1.5rem;
+
+font-size: 0.95rem;
+
+line-height: 1.9;
+
+margin-bottom: 4rem;
+
+min-height: auto;
+
+&:hover{
     transform: translateX(-50%);
+}
 
-    padding: 2rem 1.5rem;
-
-    font-size: 0.95rem;
-
-    line-height: 1.9;
-
-    margin-bottom: 4rem;
-
-    min-height: auto;
-
-    &:hover{
-        transform: translateX(-50%);
-    }
 }
 
 @media (max-width: 480px){
 
-    width: 90vw;
+width: 90vw;
 
-    padding: 1.5rem;
+padding: 1.5rem;
 
-    font-size: 0.88rem;
+font-size: 0.88rem;
 
-    line-height: 1.8;
+line-height: 1.8;
+
 }
 `
 
 const AboutPage = () => {
-    return (
-        <ThemeProvider theme={DarkTheme}>
+return (
+<ThemeProvider theme={DarkTheme}>
 
-            <Box>
+        <Box>
 
-                <LogoComponent theme='dark' />
+            <LogoComponent theme='dark' />
 
-                {/* SOCIAL ICONS REMOVED */}
+            <PowerButton />
 
-                <PowerButton />
+            <ParticleComponent theme='dark' />
 
-                <ParticleComponent theme='dark' />
+            <Spaceman>
+                <img src={astronaut} alt="spaceman" />
+            </Spaceman>
 
-                <Spaceman>
-                    <img src={astronaut} alt="spaceman" />
-                </Spaceman>
+            <Main>
 
-                <Main>
+                I'm Prem Chalase, a BCA graduate and Digital Marketing enthusiast passionate about helping businesses grow through SEO, content strategy, lead generation, and data-driven marketing.
 
-                    I'm Prem Chalase, an Digital Marketing enthusiast pursuing BCA in India, passionate about building impactful online brands, audience engagement, and professional communication.
+                <br /><br />
 
-                    <br /><br />
+                During my internship at Corenest Tech LLP (Writebing), I worked on social media marketing, audience engagement, content planning, local SEO, lead generation, and performance analysis across LinkedIn, Instagram, Facebook, Quora, Reddit, and YouTube.
 
-                    I specialize in Social Media Marketing, Recruitment Support, Branding, Content Strategy, and Audience Engagement across LinkedIn, Instagram, Facebook, Quora, Reddit, and YouTube.
+                <br /><br />
 
-                    <br /><br />
+                I have hands-on experience with Google Analytics 4, Microsoft Clarity, Google Search Console, Brevo, Canva, and SEO tools. I enjoy analyzing user behavior, optimizing digital campaigns, and improving online visibility through strategic marketing initiatives.
 
-                    During my internships at Corenest Tech LLP, Writebing, and LernX, I worked on recruitment outreach, multi-platform marketing campaigns, content creation, LinkedIn engagement, branding strategies, and communication-focused activities.
+                <br /><br />
 
-                    <br /><br />
+                Alongside my internship experience, I built and marketed my own project, Prem's Pencil Sketches, where I implemented SEO, email marketing automation, conversion-focused landing pages, and behavioral analytics to attract and convert potential customers.
 
-                    I enjoy building creative campaigns, experimenting with branding ideas, and helping businesses grow through strategy, engagement, and consistency.
+                <br /><br />
 
-                    <br /><br />
+                I am continuously learning and expanding my expertise in Digital Marketing, SEO, Analytics, Growth Marketing, and Lead Generation while building practical projects that deliver measurable results.
 
-                    My goal is to continuously learn, improve my communication and management skills, and grow as a professional in HR, branding, and digital marketing.
+            </Main>
 
-                </Main>
+            <BigTitle
+                text="ABOUT"
+                top="10%"
+                left="5%"
+            />
 
-                <BigTitle
-                    text="ABOUT"
-                    top="10%"
-                    left="5%"
-                />
+        </Box>
 
-            </Box>
+    </ThemeProvider>
+)
 
-        </ThemeProvider>
-    )
 }
 
 export default AboutPage

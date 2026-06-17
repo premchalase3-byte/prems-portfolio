@@ -14,7 +14,7 @@ import BigTitlte from "../subComponents/BigTitlte";
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
 
-  min-height: 100vh;
+  min-height: 450vh;
 
   position: relative;
 
@@ -23,11 +23,8 @@ const Box = styled.div`
 
   overflow-x: hidden;
 
-  @media (min-width: 769px){
-    height: 400vh;
-  }
-
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
+    min-height: 100vh;
 
     padding: 7rem 0 4rem 0;
 
@@ -39,22 +36,20 @@ const Main = styled(motion.ul)`
   position: fixed;
 
   top: 12rem;
-  left: calc(10rem + 15vw);
+  left: calc(8rem + 12vw);
 
-  height: 40vh;
+  height: auto;
 
   display: flex;
+  align-items: stretch;
 
   color: white;
 
-  @media (max-width: 768px){
-
+  @media (max-width: 768px) {
     position: relative;
 
     top: 0;
     left: 0;
-
-    height: auto;
 
     width: 100%;
 
@@ -83,8 +78,7 @@ const Rotate = styled.span`
 
   z-index: 1;
 
-  @media (max-width: 768px){
-
+  @media (max-width: 768px) {
     width: 55px;
     height: 55px;
 
@@ -93,44 +87,40 @@ const Rotate = styled.span`
   }
 `;
 
-// Framer-motion Configuration
-
 const container = {
-  hidden: { opacity: 0 },
+  hidden: {
+    opacity: 0,
+  },
 
   show: {
     opacity: 1,
 
     transition: {
-      staggerChildren: 0.3,
+      staggerChildren: 0.25,
       duration: 0.5,
     },
   },
 };
 
 const WorkPage = () => {
-
   const ref = useRef(null);
 
   const yinyang = useRef(null);
 
   useEffect(() => {
+    if (window.innerWidth <= 768) return;
 
-    // Disable horizontal scroll animation on mobile
-
-    if(window.innerWidth <= 768) return;
-
-    let element = ref.current;
+    const element = ref.current;
 
     const rotate = () => {
+      if (!element) return;
 
-      element.style.transform =
-      `translateX(${-window.pageYOffset}px)`;
+      element.style.transform = `translateX(${-window.pageYOffset}px)`;
 
-      return (
+      if (yinyang.current) {
         yinyang.current.style.transform =
-        "rotate(" + -window.pageYOffset + "deg)"
-      );
+          "rotate(" + -window.pageYOffset + "deg)";
+      }
     };
 
     window.addEventListener("scroll", rotate);
@@ -138,17 +128,11 @@ const WorkPage = () => {
     return () => {
       window.removeEventListener("scroll", rotate);
     };
-
   }, []);
 
   return (
-
     <ThemeProvider theme={DarkTheme}>
-
       <Box>
-
-        {/* REMOVED SOCIAL ICONS */}
-
         <LogoComponent theme="dark" />
 
         <PowerButton />
@@ -159,36 +143,25 @@ const WorkPage = () => {
           initial="hidden"
           animate="show"
         >
-
           {Work.map((d) => (
-
-            <Card
-              key={d.id}
-              data={d}
-            />
-
+            <Card key={d.id} data={d} />
           ))}
-
         </Main>
 
         <Rotate ref={yinyang}>
-
           <YinYang
             width={window.innerWidth <= 768 ? 55 : 80}
             height={window.innerWidth <= 768 ? 55 : 80}
             fill={DarkTheme.text}
           />
-
         </Rotate>
 
         <BigTitlte
-          text="WORK"
+          text="PROJECTS"
           top="10%"
           right="20%"
         />
-
       </Box>
-
     </ThemeProvider>
   );
 };
