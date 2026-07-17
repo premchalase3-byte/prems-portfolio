@@ -8,26 +8,24 @@ import PowerButton from "../subComponents/PowerButton";
 import BigTitle from "../subComponents/BigTitlte";
 
 const Box = styled.div`
-background-color: ${(props) => props.theme.body};
+  background-color: ${(props) => props.theme.body};
 
-width: 100vw;
-min-height: 100vh;
+  width: 100vw;
+  min-height: 100vh;
 
-display: flex;
-justify-content: center;
-align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-position: relative;
+  position: relative;
 
-overflow-x: hidden;
-overflow-y: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 
-padding: 4rem 0;
+  padding: 4rem 0;
 
-/* Soft Background Glow */
-
-&::before{
-    content: '';
+  &::before {
+    content: "";
 
     position: absolute;
 
@@ -36,7 +34,7 @@ padding: 4rem 0;
 
     border-radius: 50%;
 
-    background: rgba(0,0,0,0.05);
+    background: rgba(0, 0, 0, 0.05);
 
     top: 10%;
     left: 5%;
@@ -44,10 +42,10 @@ padding: 4rem 0;
     filter: blur(120px);
 
     z-index: 0;
-}
+  }
 
-&::after{
-    content: '';
+  &::after {
+    content: "";
 
     position: absolute;
 
@@ -56,7 +54,7 @@ padding: 4rem 0;
 
     border-radius: 50%;
 
-    background: rgba(0,0,0,0.04);
+    background: rgba(0, 0, 0, 0.04);
 
     bottom: 5%;
     right: 5%;
@@ -64,64 +62,59 @@ padding: 4rem 0;
     filter: blur(100px);
 
     z-index: 0;
-}
+  }
 
-@media (max-width: 768px){
-
+  @media (max-width: 768px) {
     align-items: flex-start;
 
     padding: 7rem 0 4rem 0;
-}
+  }
 `;
 
 const Main = styled.div`
-border: 1.5px solid rgba(0,0,0,0.2);
+  border: 1.5px solid rgba(0, 0, 0, 0.2);
 
-/* Glass Effect */
+  background: rgba(255, 255, 255, 0.15);
 
-background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 
-backdrop-filter: blur(12px);
--webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
 
-box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  color: ${(props) => props.theme.text};
 
-color: ${(props) => props.theme.text};
+  padding: 3rem;
 
-padding: 3rem;
+  width: 50vw;
+  min-height: 65vh;
 
-width: 50vw;
-min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-display: flex;
-flex-direction: column;
-justify-content: center;
+  font-family: "Ubuntu Mono", monospace;
 
-font-family: 'Ubuntu Mono', monospace;
+  z-index: 3;
 
-z-index: 3;
+  line-height: 2;
 
-line-height: 2;
+  border-radius: 20px;
 
-border-radius: 20px;
+  transition: 0.3s ease;
 
-transition: 0.3s ease;
+  overflow-wrap: break-word;
 
-overflow-wrap: break-word;
-
-&:hover{
+  &:hover {
     transform: translateY(-5px);
 
-    background: rgba(255,255,255,0.22);
-}
+    background: rgba(255, 255, 255, 0.22);
+  }
 
-@media (max-width: 1024px){
-
+  @media (max-width: 1024px) {
     width: 70vw;
-}
+  }
 
-@media (max-width: 768px){
-
+  @media (max-width: 768px) {
     width: 90vw;
 
     min-height: auto;
@@ -129,104 +122,98 @@ overflow-wrap: break-word;
     padding: 2rem 1.5rem;
 
     line-height: 1.8;
-}
+  }
 
-@media (max-width: 480px){
-
+  @media (max-width: 480px) {
     width: 92vw;
 
     padding: 1.5rem 1rem;
-}
+  }
 `;
 
 const Title = styled.h1`
-font-size: 3.5rem;
+  font-size: 3.5rem;
 
-margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 
-font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
 
-@media (max-width: 768px){
-
+  @media (max-width: 768px) {
     font-size: 2.3rem;
 
     margin-bottom: 1rem;
-}
+  }
 
-@media (max-width: 480px){
-
+  @media (max-width: 480px) {
     font-size: 1.9rem;
-}
+  }
 `;
 
 const Text = styled.p`
-font-size: 1.2rem;
+  font-size: 1.15rem;
 
-margin-bottom: 1.2rem;
+  margin-bottom: 1.2rem;
 
-word-break: break-word;
+  word-break: break-word;
 
-line-height: 1.9;
+  line-height: 1.9;
 
-@media (max-width: 768px){
-
+  @media (max-width: 768px) {
     font-size: 1rem;
 
     line-height: 1.7;
-}
+  }
 
-@media (max-width: 480px){
-
+  @media (max-width: 480px) {
     font-size: 0.9rem;
-}
+  }
 `;
 
 const LinkText = styled.a`
-color: ${(props) => props.theme.text};
+  color: ${(props) => props.theme.text};
 
-text-decoration: underline;
+  text-decoration: underline;
 
-transition: 0.3s ease;
+  transition: 0.3s ease;
 
-word-break: break-word;
+  word-break: break-word;
 
-&:hover{
+  &:hover {
     opacity: 0.7;
-}
+  }
 `;
 
 const Button = styled.a`
-margin-top: 1.5rem;
+  margin-top: 1.5rem;
 
-width: fit-content;
+  width: fit-content;
 
-padding: 1rem 2rem;
+  padding: 1rem 2rem;
 
-background-color: ${(props) => props.theme.text};
+  background-color: ${(props) => props.theme.text};
 
-color: ${(props) => props.theme.body};
+  color: ${(props) => props.theme.body};
 
-text-decoration: none;
+  text-decoration: none;
 
-border: 2px solid ${(props) => props.theme.text};
+  border: 2px solid ${(props) => props.theme.text};
 
-transition: 0.3s ease;
+  transition: 0.3s ease;
 
-font-weight: 600;
-font-size: 1.1rem;
+  font-weight: 600;
+  font-size: 1rem;
 
-border-radius: 10px;
+  border-radius: 10px;
 
-&:hover{
+  &:hover {
     background-color: ${(props) => props.theme.body};
 
     color: ${(props) => props.theme.text};
 
     transform: translateY(-4px);
-}
+  }
 
-@media (max-width: 768px){
-
+  @media (max-width: 768px) {
     width: 100%;
 
     text-align: center;
@@ -234,66 +221,60 @@ border-radius: 10px;
     font-size: 1rem;
 
     padding: 0.9rem 1rem;
-}
+  }
 
-@media (max-width: 480px){
-
+  @media (max-width: 480px) {
     font-size: 0.9rem;
-}
+  }
 `;
 
 const ContactPage = () => {
-
   return (
-
     <ThemeProvider theme={lightTheme}>
-
       <Box>
-
-        {/* Removed Social Icons */}
-
         <LogoComponent theme="light" />
 
         <PowerButton />
 
         <Main>
-
           <Title>Let's Connect.</Title>
 
           <Text>
-            I'm Prem Chalase, a BCA graduate and Digital Marketing professional focused on SEO, Analytics, Lead Generation, Email Marketing, and Growth Marketing. I'm currently open to internships, full-time opportunities, freelance projects, and collaborations.
+            I'm Prem Chalase, a Performance Marketer passionate about helping businesses grow through data-driven marketing strategies, lead generation, paid advertising, and conversion optimization.
           </Text>
 
-          {/* EMAIL */}
+          <Text>
+           Currently, I'm working as a Performance Marketing Associate at Diginik, where I contribute to the marketing initiatives of Udyami Bharat Expo 2026. My work involves campaign planning, audience research, Google Ads and Meta Ads strategies, social media marketing, SEO, lead generation, and performance analytics aimed at driving measurable business growth.
+          </Text>
 
           <Text>
-            Email:
+            Beyond my professional work, I actively build marketing-focused projects to expand my expertise in Performance Marketing, Growth Marketing, Analytics, and Conversion Optimization.
+          </Text>
+
+          <Text>
+            <strong>Email:</strong>
             <br />
-            <LinkText
-              href="mailto:premchalase3@gmail.com"
-            >
+            <LinkText href="mailto:premchalase3@gmail.com">
               premchalase3@gmail.com
             </LinkText>
           </Text>
 
-          {/* PHONE */}
-
           <Text>
-            Phone:
+            <strong>Phone:</strong>
             <br />
-            <LinkText
-              href="tel:+917760973219"
-            >
+            <LinkText href="tel:+917760973219">
               +91 7760973219
             </LinkText>
           </Text>
+
           <Text>
-            Location:
+            <strong>Location:</strong>
             <br />
-              Hubli, Karnataka, India
+            Bangalore, Karnataka, India
           </Text>
+
           <Text>
-            LinkedIn:
+            <strong>LinkedIn:</strong>
             <br />
             <LinkText
               href="https://www.linkedin.com/in/prem-chalase-21a572392/"
@@ -305,7 +286,7 @@ const ContactPage = () => {
           </Text>
 
           <Text>
-            GitHub:
+            <strong>GitHub:</strong>
             <br />
             <LinkText
               href="https://github.com/premchalase3-byte"
@@ -316,24 +297,17 @@ const ContactPage = () => {
             </LinkText>
           </Text>
 
-          <Button 
+          <Button
             href="https://drive.google.com/file/d/1WSP2PFA-2gePtYuwVvrTE_8545ZOEYYc/view?usp=drivesdk"
             target="_blank"
             rel="noopener noreferrer"
           >
             Download Resume
           </Button>
-
         </Main>
 
-        <BigTitle
-          text="CONTACT"
-          top="10%"
-          right="5%"
-        />
-
+        <BigTitle text="CONTACT" top="10%" right="5%" />
       </Box>
-
     </ThemeProvider>
   );
 };

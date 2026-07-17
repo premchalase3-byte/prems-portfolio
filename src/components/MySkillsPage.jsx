@@ -1,36 +1,34 @@
-import React from 'react'
-import styled, { ThemeProvider } from 'styled-components'
+import React from "react";
+import styled, { ThemeProvider } from "styled-components";
 
-import { lightTheme } from './Themes'
-import { Design, Develope } from './AllSvgs'
+import { lightTheme } from "./Themes";
+import { Design, Develope } from "./AllSvgs";
 
-import LogoComponent from '../subComponents/LogoComponent'
-import PowerButton from '../subComponents/PowerButton'
-import ParticleComponent from '../subComponents/ParticleComponent'
-import BigTitle from '../subComponents/BigTitlte'
+import LogoComponent from "../subComponents/LogoComponent";
+import PowerButton from "../subComponents/PowerButton";
+import ParticleComponent from "../subComponents/ParticleComponent";
+import BigTitle from "../subComponents/BigTitlte";
 
 const Box = styled.div`
-background-color: ${props => props.theme.body};
+  background-color: ${(props) => props.theme.body};
 
-width: 100vw;
-min-height: 100vh;
+  width: 100vw;
+  min-height: 100vh;
 
-position: relative;
+  position: relative;
 
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
 
-padding: 4rem;
+  padding: 4rem;
 
-overflow-x: hidden;
-overflow-y: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 
-/* Background Glow Effects */
-
-&::before{
-    content: '';
+  &::before {
+    content: "";
 
     position: absolute;
 
@@ -39,7 +37,7 @@ overflow-y: auto;
 
     border-radius: 50%;
 
-    background: rgba(0,0,0,0.06);
+    background: rgba(0, 0, 0, 0.06);
 
     top: 10%;
     left: 5%;
@@ -47,10 +45,10 @@ overflow-y: auto;
     filter: blur(120px);
 
     z-index: 0;
-}
+  }
 
-&::after{
-    content: '';
+  &::after {
+    content: "";
 
     position: absolute;
 
@@ -59,7 +57,7 @@ overflow-y: auto;
 
     border-radius: 50%;
 
-    background: rgba(0,0,0,0.05);
+    background: rgba(0, 0, 0, 0.05);
 
     bottom: 5%;
     right: 5%;
@@ -67,10 +65,9 @@ overflow-y: auto;
     filter: blur(100px);
 
     z-index: 0;
-}
+  }
 
-@media (max-width: 900px){
-
+  @media (max-width: 900px) {
     flex-direction: column;
 
     align-items: center;
@@ -78,128 +75,122 @@ overflow-y: auto;
     gap: 2rem;
 
     padding: 8rem 1rem 4rem 1rem;
-}
-`
+  }
+`;
 
 const Main = styled.div`
-border: 1.5px solid rgba(0,0,0,0.2);
+  border: 1.5px solid rgba(0, 0, 0, 0.2);
 
-/* GLASS EFFECT */
+  background: rgba(255, 255, 255, 0.12);
 
-background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 
-backdrop-filter: blur(12px);
--webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
 
-box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  color: ${(props) => props.theme.text};
 
-color: ${props => props.theme.text};
+  padding: 2.5rem;
 
-padding: 2.5rem;
+  width: 32rem;
+  min-height: 40rem;
 
-width: 32rem;
-min-height: 40rem;
+  border-radius: 20px;
 
-border-radius: 20px;
+  z-index: 3;
 
-z-index: 3;
+  line-height: 1.7;
 
-line-height: 1.7;
+  cursor: pointer;
 
-cursor: pointer;
+  font-family: "Ubuntu Mono", monospace;
 
-font-family: 'Ubuntu Mono', monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
+  transition: all 0.35s ease;
 
-transition: all 0.35s ease;
+  overflow-wrap: break-word;
 
-overflow-wrap: break-word;
-
-&:hover{
+  &:hover {
     color: white;
 
-    background: rgba(0,0,0,0.88);
+    background: rgba(0, 0, 0, 0.88);
 
     transform: translateY(-12px) scale(1.02);
 
-    border: 1px solid rgba(255,255,255,0.2);
-}
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
 
-@media (max-width: 1024px){
-
+  @media (max-width: 1024px) {
     width: 42vw;
-}
+  }
 
-@media (max-width: 900px){
-
+  @media (max-width: 900px) {
     width: 90vw;
 
     min-height: auto;
 
     padding: 2rem;
-}
+  }
 
-@media (max-width: 480px){
-
+  @media (max-width: 480px) {
     width: 92vw;
 
     padding: 1.5rem;
 
     border-radius: 16px;
-}
-`
+  }
+`;
 
 const Title = styled.h2`
-display: flex;
-justify-content: flex-start;
-align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 
-font-size: calc(1rem + 1vw);
+  font-size: calc(1rem + 1vw);
 
-margin-bottom: 1.8rem;
+  margin-bottom: 1.8rem;
 
-font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
 
-${Main}:hover &{
-    & > *{
-        fill: white;
+  ${Main}:hover & {
+    & > * {
+      fill: white;
     }
-}
+  }
 
-& > *:first-child{
+  & > *:first-child {
     margin-right: 1rem;
-}
+  }
 
-@media (max-width: 768px){
-
+  @media (max-width: 768px) {
     font-size: 1.3rem;
 
     margin-bottom: 1.2rem;
 
-    svg{
-        width: 32px;
-        height: 32px;
+    svg {
+      width: 32px;
+      height: 32px;
     }
-}
-`
+  }
+`;
 
 const Description = styled.div`
-color: ${props => props.theme.text};
+  color: ${(props) => props.theme.text};
 
-font-size: calc(0.7rem + 0.4vw);
+  font-size: calc(0.7rem + 0.4vw);
 
-padding: 0.8rem 0;
+  padding: 0.8rem 0;
 
-transition: 0.3s ease;
+  transition: 0.3s ease;
 
-${Main}:hover &{
-    color: rgba(255,255,255,0.92);
-}
+  ${Main}:hover & {
+    color: rgba(255, 255, 255, 0.92);
+  }
 
-strong{
+  strong {
     display: inline-block;
 
     margin-bottom: 1rem;
@@ -209,170 +200,147 @@ strong{
     font-size: 1rem;
 
     letter-spacing: 1px;
-}
+  }
 
-ul{
+  ul {
     margin-left: 1.2rem;
 
     line-height: 2;
-}
+  }
 
-li{
+  li {
     transition: 0.3s ease;
-}
+  }
 
-${Main}:hover li{
+  ${Main}:hover li {
     transform: translateX(5px);
-}
+  }
 
-p{
+  p {
     line-height: 1.9;
-}
+  }
 
-@media (max-width: 768px){
-
+  @media (max-width: 768px) {
     font-size: 0.95rem;
 
     line-height: 1.8;
 
-    strong{
-        font-size: 0.95rem;
+    strong {
+      font-size: 0.95rem;
     }
 
-    ul{
-        line-height: 1.8;
+    ul {
+      line-height: 1.8;
     }
 
-    p{
-        line-height: 1.8;
+    p {
+      line-height: 1.8;
     }
-}
+  }
 
-@media (max-width: 480px){
-
+  @media (max-width: 480px) {
     font-size: 0.88rem;
-}
-`
+  }
+`;
 
 const MySkillsPage = () => {
+  return (
+    <ThemeProvider theme={lightTheme}>
+      <Box>
+        <LogoComponent theme="light" />
 
-    return (
+        <PowerButton />
 
-        <ThemeProvider theme={lightTheme}>
+        <ParticleComponent theme="light" />
 
-            <Box>
+        {/* LEFT CARD */}
 
-                <LogoComponent theme='light'/>
+        <Main>
+          <Title>
+            <Design width={40} height={40} />
+            Performance Marketing
+          </Title>
 
-                {/* SOCIAL ICONS REMOVED */}
+          <Description>
+            I help businesses grow through data-driven marketing strategies,
+            paid advertising, lead generation, and conversion-focused campaigns.
+          </Description>
 
-                <PowerButton />
+          <Description>
+            <strong>I LIKE TO WORK ON</strong>
 
-                <ParticleComponent theme='light' />
+            <ul>
+              <li>Google Ads</li>
+              <li>Meta Ads</li>
+              <li>Campaign Planning</li>
+              <li>Lead Generation</li>
+              <li>Audience Research & Segmentation</li>
+              <li>Budget Planning</li>
+              <li>Conversion Optimization</li>
+            </ul>
+          </Description>
 
-                {/* LEFT CARD */}
+          <Description>
+            <strong>TOOLS</strong>
 
-                <Main>
+            <ul>
+              <li>Google Ads Manager</li>
+              <li>Meta Business Suite</li>
+              <li>Google Analytics 4 (GA4)</li>
+              <li>Google Search Console</li>
+              <li>Canva</li>
+              <li>Microsoft Clarity</li>
+            </ul>
+          </Description>
+        </Main>
 
-                    <Title>
-                        <Design width={40} height={40} />
-                        Digital Marketing
-                    </Title>
+        {/* RIGHT CARD */}
 
-                    <Description>
-                          I help businesses improve their online presence through SEO,
-                         content marketing, lead generation, email marketing, and
-                         data-driven digital strategies.
-                    </Description>
+        <Main>
+          <Title>
+            <Develope width={40} height={40} />
+            Analytics & Growth Strategy
+          </Title>
 
-                    <Description>
+          <Description>
+            I enjoy analyzing user behavior, optimizing campaigns, improving
+            website visibility, and helping businesses scale through measurable
+            marketing strategies.
+          </Description>
 
-                        <strong>I LIKE TO WORK ON</strong>
+          <Description>
+            <strong>SPECIALIZATIONS</strong>
 
-                        <ul>
-                            <li>Search Engine Optimization (SEO)</li>
-                            <li>Lead Generation</li>
-                             <li>Email Marketing</li>
-                             <li>Content Marketing</li>
-                             <li>Social Media Marketing</li>
-                            <li>Keyword Research</li>
-                            <li>Audience Engagement</li>
-                        </ul>
+            <ul>
+              <li>Technical SEO</li>
+              <li>Marketing Analytics</li>
+              <li>Performance Analysis</li>
+              <li>Growth Marketing</li>
+              <li>Marketing Automation</li>
+              <li>Social Media Strategy</li>
+              <li>Keyword Research</li>
+            </ul>
+          </Description>
 
-                    </Description>
+          <Description>
+            <strong>PLATFORMS & TOOLS</strong>
 
-                    <Description>
+            <ul>
+              <li>Google Analytics 4</li>
+              <li>Microsoft Clarity</li>
+              <li>Google Search Console</li>
+              <li>Brevo</li>
+              <li>Instagram & Facebook</li>
+              <li>LinkedIn & YouTube</li>
+              <li>GitHub & Google Workspace</li>
+            </ul>
+          </Description>
+        </Main>
 
-                        <strong>TOOLS</strong>
+        <BigTitle text="SKILLS" top="78%" right="8%" />
+      </Box>
+    </ThemeProvider>
+  );
+};
 
-                        <ul>
-                             <li>Google Analytics 4 (GA4)</li>
-                             <li>Google Search Console</li>
-                             <li>Microsoft Clarity</li>
-                             <li>Brevo</li>
-                             <li>Meta Business Suite</li>
-                             <li>Canva</li>
-                        </ul>
-
-                    </Description>
-
-                </Main>
-
-                {/* RIGHT CARD */}
-
-                <Main>
-
-                    <Title>
-                        <Develope width={40} height={40} />
-                        Growth & Strategy
-                    </Title>
-
-                    <Description>
-                        I enjoy analyzing user behavior, optimizing campaigns,
-                        improving search visibility, and helping businesses grow
-                        through measurable marketing strategies.
-                    </Description>
-
-                    <Description>
-
-                        <strong>SPECIALIZATIONS</strong>
-
-                        <p>
-                             SEO Optimization, Technical SEO, On-Page SEO,
-                             Conversion Rate Optimization (CRO), Lead Generation,
-                             Email Automation, Local SEO, Audience Growth,
-                             Content Strategy, and Performance Analysis.
-                        </p>
-                    </Description>
-
-                    <Description>
-
-                        <strong>PLATFORMS</strong>
-
-                        <p>
-                            LinkedIn, Brevo, Microsoft Clarity, Instagram, Facebook,
-                            Reddit, Quora, YouTube,
-                            Business Listing, Microsoft Clarity, GitHub &
-                            Google Workspace.
-                        </p>
-
-                    </Description>
-
-                </Main>
-
-                {/* BIG BACKGROUND TEXT */}
-
-                <BigTitle
-                    text="SKILLS"
-                    top="78%"
-                    right="8%"
-                />
-
-            </Box>
-
-        </ThemeProvider>
-
-    )
-}
-
-export default MySkillsPage
+export default MySkillsPage;

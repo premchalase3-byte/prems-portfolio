@@ -4,11 +4,11 @@ import styled from "styled-components";
 
 const Box = styled(motion.a)`
   width: 100%;
-  max-width: 340px;
+  max-width: 380px;
 
   text-decoration: none;
 
-  min-height: 28rem;
+  min-height: 26rem;
 
   padding: 1rem;
 
@@ -16,9 +16,9 @@ const Box = styled(motion.a)`
 
   border: 2px solid ${(props) => props.theme.text};
 
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(8px);
 
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 
   cursor: pointer;
 
@@ -28,16 +28,22 @@ const Box = styled(motion.a)`
 
   z-index: 5;
 
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.08);
 
   overflow: hidden;
 
-  transition: all 0.3s ease;
+  border-radius: 18px;
+
+  transition: all 0.35s ease;
 
   &:hover {
     color: ${(props) => props.theme.body};
+
     background-color: ${(props) => props.theme.text};
-    transform: translateY(-8px);
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
   }
 `;
 
@@ -45,34 +51,40 @@ const Image = styled.div`
   background-image: ${(props) => `url(${props.$img})`};
 
   width: 100%;
-  height: 220px;
+  height: 240px;
 
   background-size: cover;
   background-position: center center;
+
+  border-radius: 12px;
 
   border: 1px solid transparent;
 
   flex-shrink: 0;
 
+  transition: all 0.3s ease;
+
   ${Box}:hover & {
     border: 1px solid ${(props) => props.theme.body};
+
+    transform: scale(1.02);
   }
 
-  @media (max-width: 768px){
-    height: 200px;
+  @media (max-width: 768px) {
+    height: 220px;
   }
 `;
 
 const Title = styled.h3`
   color: inherit;
 
-  padding: 0.8rem 0;
+  padding: 1rem 0;
 
   font-family: "Karla", sans-serif;
 
   font-weight: 700;
 
-  font-size: 1.5rem;
+  font-size: 1.45rem;
 
   line-height: 1.4;
 
@@ -84,14 +96,13 @@ const Title = styled.h3`
     border-bottom: 1px solid ${(props) => props.theme.body};
   }
 
-  @media (max-width: 768px){
-
+  @media (max-width: 768px) {
     font-size: 1.2rem;
   }
 `;
 
 const HashTags = styled.div`
-  padding: 0.8rem 0;
+  padding: 1rem 0;
 
   display: flex;
 
@@ -103,17 +114,49 @@ const HashTags = styled.div`
 `;
 
 const Tag = styled.span`
-  font-size: 0.95rem;
+  padding: 0.3rem 0.7rem;
 
-  word-break: break-word;
+  border-radius: 8px;
+
+  background: rgba(128, 128, 128, 0.15);
+
+  font-size: 0.8rem;
+
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+`;
+
+const Footer = styled.div`
+  margin-top: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 1rem;
 `;
 
 const Date = styled.span`
-  padding-top: 1rem;
+  font-size: 0.85rem;
 
-  font-size: 0.95rem;
+  font-weight: 600;
+`;
 
-  margin-top: auto;
+const ReadMore = styled.span`
+  font-size: 0.9rem;
+
+  font-weight: 700;
+
+  transition: 0.3s ease;
+
+  ${Box}:hover & {
+    transform: translateX(5px);
+  }
 `;
 
 const Container = styled(motion.div)`
@@ -123,7 +166,6 @@ const Container = styled(motion.div)`
   justify-content: center;
 `;
 
-// Framer Motion configuration
 const Item = {
   hidden: {
     scale: 0,
@@ -140,41 +182,31 @@ const Item = {
 };
 
 const BlogComponent = (props) => {
-
   const { name, tags, date, imgSrc, link } = props.blog;
 
   return (
-
     <Container variants={Item}>
-
       <Box
         target="_blank"
         href={`${link}`}
+        rel="noopener noreferrer"
       >
-
         <Image $img={imgSrc} />
 
         <Title>{name}</Title>
 
         <HashTags>
-
-          {
-            tags.map((t, id) => {
-
-              return (
-                <Tag key={id}>
-                  #{t}
-                </Tag>
-              )
-            })
-          }
-
+          {tags.map((t, id) => {
+            return <Tag key={id}>{t}</Tag>;
+          })}
         </HashTags>
 
-        <Date>{date}</Date>
+        <Footer>
+          <Date>{date}</Date>
 
+          <ReadMore>Read More →</ReadMore>
+        </Footer>
       </Box>
-
     </Container>
   );
 };

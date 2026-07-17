@@ -174,10 +174,10 @@ const Intro = () => {
 
                     <h1>Hi, I'm Prem.</h1>
 
-                    <h3>Digital Marketing & SEO Specialist</h3>
+                    <h3>Performance Marketing & SEO Specialist</h3>
 
                     <h6>
-                        Helping businesses grow through strategic digital marketing,
+                        Helping businesses grow through strategic Performance & digital marketing,
                         search optimization, lead generation, and data-driven
                         decision making.
                     </h6>

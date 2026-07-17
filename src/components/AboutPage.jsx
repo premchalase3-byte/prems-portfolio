@@ -1,31 +1,31 @@
-import React from 'react'
-import styled, { keyframes, ThemeProvider } from 'styled-components'
-import { DarkTheme } from './Themes';
+import React from "react";
+import styled, { keyframes, ThemeProvider } from "styled-components";
+import { DarkTheme } from "./Themes";
 
-import LogoComponent from '../subComponents/LogoComponent';
-import PowerButton from '../subComponents/PowerButton';
-import ParticleComponent from '../subComponents/ParticleComponent';
-import BigTitle from '../subComponents/BigTitlte'
+import LogoComponent from "../subComponents/LogoComponent";
+import PowerButton from "../subComponents/PowerButton";
+import ParticleComponent from "../subComponents/ParticleComponent";
+import BigTitle from "../subComponents/BigTitlte";
 
-import astronaut from '../assets/Images/spaceman.png'
+import astronaut from "../assets/Images/spaceman.png";
 
 const Box = styled.div`
-background-color: ${(props) => props.theme.body};
+  background-color: ${(props) => props.theme.body};
 
-width: 100vw;
-min-height: 100vh;
+  width: 100vw;
+  min-height: 100vh;
 
-position: relative;
+  position: relative;
 
-overflow-x: hidden;
-overflow-y: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 
-padding-bottom: 4rem;
+  padding-bottom: 4rem;
 
-@media (max-width: 768px){
-padding-bottom: 8rem;
-}
-`
+  @media (max-width: 768px) {
+    padding-bottom: 8rem;
+  }
+`;
 
 const float = keyframes`
 0% {
@@ -39,183 +39,194 @@ const float = keyframes`
 100% {
     transform: translateY(-10px);
 }
-`
+`;
+
 const Spaceman = styled.div`
-position: absolute;
+  position: absolute;
 
-top: 8%;
-right: 5%;
+  top: 8%;
+  right: 5%;
 
-width: 20vw;
+  width: 20vw;
 
-animation: ${float} 4s ease infinite;
+  animation: ${float} 4s ease infinite;
 
-z-index:2;
+  z-index: 2;
 
-img{
-width: 100%;
-height: auto;
-}
+  img {
+    width: 100%;
+    height: auto;
+  }
 
-@media (max-width: 1024px){
-width: 28vw;
-}
+  @media (max-width: 1024px) {
+    width: 28vw;
+  }
 
-@media (max-width: 768px){
+  @media (max-width: 768px) {
+    width: 35vw;
 
-width: 35vw;
+    top: 5%;
+    right: 5%;
 
-top: 5%;
-right: 5%;
-
-opacity: 0.8;
-
-}
-`
+    opacity: 0.8;
+  }
+`;
 
 const Main = styled.div`
-border: 2px solid ${(props) => props.theme.text};
+  border: 2px solid ${(props) => props.theme.text};
 
-color: ${(props) => props.theme.text};
+  color: ${(props) => props.theme.text};
 
-padding: 3rem;
+  padding: 3rem;
 
-width: 58vw;
+  width: 58vw;
 
-z-index: 3;
+  z-index: 3;
 
-line-height: 2;
+  line-height: 2;
 
-display: flex;
-justify-content: center;
-align-items: flex-start;
-flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
 
-font-size: calc(0.75rem + 0.5vw);
+  font-size: calc(0.75rem + 0.5vw);
 
-font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
 
-font-weight: 400;
+  font-weight: 400;
 
-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 
-background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
 
-position: absolute;
+  position: absolute;
 
-left: 6%;
-top: 14%;
+  left: 6%;
+  top: 14%;
 
-border-radius: 20px;
+  border-radius: 20px;
 
-box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
 
-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 
-overflow-wrap: break-word;
+  overflow-wrap: break-word;
 
-&:hover{
-transform: translateY(-5px);
-background: rgba(255,255,255,0.12);
-}
+  &:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.12);
+  }
 
-@media (max-width: 1024px){
+  @media (max-width: 1024px) {
+    width: 70vw;
 
-width: 70vw;
+    top: 16%;
+  }
 
-top: 16%;
+  @media (max-width: 768px) {
+    position: relative;
 
-}
+    width: 88vw;
 
-@media (max-width: 768px){
+    left: 50%;
+    top: 12rem;
 
-position: relative;
-
-width: 88vw;
-
-left: 50%;
-top: 12rem;
-
-transform: translateX(-50%);
-
-padding: 2rem 1.5rem;
-
-font-size: 0.95rem;
-
-line-height: 1.9;
-
-margin-bottom: 4rem;
-
-min-height: auto;
-
-&:hover{
     transform: translateX(-50%);
-}
 
-}
+    padding: 2rem 1.5rem;
 
-@media (max-width: 480px){
+    font-size: 0.95rem;
 
-width: 90vw;
+    line-height: 1.9;
 
-padding: 1.5rem;
+    margin-bottom: 4rem;
 
-font-size: 0.88rem;
+    min-height: auto;
 
-line-height: 1.8;
+    &:hover {
+      transform: translateX(-50%);
+    }
+  }
 
-}
-`
+  @media (max-width: 480px) {
+    width: 90vw;
+
+    padding: 1.5rem;
+
+    font-size: 0.88rem;
+
+    line-height: 1.8;
+  }
+`;
 
 const AboutPage = () => {
-return (
-<ThemeProvider theme={DarkTheme}>
+  return (
+    <ThemeProvider theme={DarkTheme}>
+      <Box>
+        <LogoComponent theme="dark" />
 
-        <Box>
+        <PowerButton />
 
-            <LogoComponent theme='dark' />
+        <ParticleComponent theme="dark" />
 
-            <PowerButton />
+        <Spaceman>
+          <img src={astronaut} alt="spaceman" />
+        </Spaceman>
 
-            <ParticleComponent theme='dark' />
+        <Main>
+          I'm Prem Chalase, a BCA graduate and aspiring Performance
+          Marketer passionate about building data-driven marketing
+          strategies that drive growth, engagement, and conversions.
 
-            <Spaceman>
-                <img src={astronaut} alt="spaceman" />
-            </Spaceman>
+          <br />
+          <br />
 
-            <Main>
+          I have hands-on experience in Performance Marketing, Google Ads,
+          Meta Ads, SEO, Lead Generation, Audience Research, Campaign
+          Planning, and Analytics. I enjoy solving business problems through
+          strategic marketing initiatives and measurable outcomes.
 
-                I'm Prem Chalase, a BCA graduate and Digital Marketing enthusiast passionate about helping businesses grow through SEO, content strategy, lead generation, and data-driven marketing.
+          <br />
+          <br />
 
-                <br /><br />
+          During my internships and projects, I have worked on social media
+          marketing, audience segmentation, content strategy, keyword
+          research, campaign planning, and website optimization. I have
+          contributed to performance marketing initiatives for Udyami Bharat
+          Expo 2026, including Meta Ads planning, audience analysis, budget
+          estimation, and multi-platform marketing campaigns.
 
-                During my internship at Corenest Tech LLP (Writebing), I worked on social media marketing, audience engagement, content planning, local SEO, lead generation, and performance analysis across LinkedIn, Instagram, Facebook, Quora, Reddit, and YouTube.
+          <br />
+          <br />
 
-                <br /><br />
+          I built and marketed projects like WebForge and Prem's Pencil
+          Sketches, where I implemented Technical SEO, Schema Markup, Google
+          Search Console integration, Microsoft Clarity analytics, lead
+          generation funnels, and conversion-focused landing pages to improve
+          user engagement and business visibility.
 
-                I have hands-on experience with Google Analytics 4, Microsoft Clarity, Google Search Console, Brevo, Canva, and SEO tools. I enjoy analyzing user behavior, optimizing digital campaigns, and improving online visibility through strategic marketing initiatives.
+          <br />
+          <br />
 
-                <br /><br />
+          I have practical experience with Google Analytics 4, Microsoft
+          Clarity, Google Search Console, Canva, Brevo, and modern marketing
+          tools that help analyze user behavior and optimize campaign
+          performance.
 
-                Alongside my internship experience, I built and marketed my own project, Prem's Pencil Sketches, where I implemented SEO, email marketing automation, conversion-focused landing pages, and behavioral analytics to attract and convert potential customers.
+          <br />
+          <br />
 
-                <br /><br />
+          Currently, I am focused on expanding my expertise in Performance
+          Marketing, Paid Advertising, Marketing Analytics, Growth Marketing,
+          and Conversion Optimization while building real-world projects that
+          deliver measurable results and meaningful business impact.
+        </Main>
 
-                I am continuously learning and expanding my expertise in Digital Marketing, SEO, Analytics, Growth Marketing, and Lead Generation while building practical projects that deliver measurable results.
-
-            </Main>
-
-            <BigTitle
-                text="ABOUT"
-                top="10%"
-                left="5%"
-            />
-
-        </Box>
-
+        <BigTitle text="ABOUT" top="10%" left="5%" />
+      </Box>
     </ThemeProvider>
-)
+  );
+};
 
-}
-
-export default AboutPage
+export default AboutPage;
