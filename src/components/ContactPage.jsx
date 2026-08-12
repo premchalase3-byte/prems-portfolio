@@ -298,7 +298,7 @@ const ContactPage = () => {
           </Text>
 
           <Button
-            href="https://drive.google.com/drive/folders/1vU-gp-F97gV52ZfD7AWrazIrPWe4gpR0?usp=sharing"
+            href="https://drive.google.com/file/d/1YAre4Dcx0y-JgL33TlrmLwLOVr4qc2QL/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
