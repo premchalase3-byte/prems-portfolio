@@ -399,7 +399,7 @@ const Main = () => {
             >
 
             <ResumeButton
-            href="https://drive.google.com/file/d/1WSP2PFA-2gePtYuwVvrTE_8545ZOEYYc/view?usp=drivesdk"
+            href="https://drive.google.com/drive/folders/1vU-gp-F97gV52ZfD7AWrazIrPWe4gpR0?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             >
